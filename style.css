@@ -1,0 +1,94 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+  }
+  a{
+    text-decoration: none;
+    padding: 10px 5px;
+    display: block;
+
+    color: #c7d69e;
+    font-size: 34px;
+  }
+
+  a::before{
+    content: "🌿";
+  }
+  
+a:hover{
+  color: lavender;
+
+}
+
+  ul{
+    list-style: none;
+    
+  }
+  .list{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+
+  .submenu{
+    display: none;
+    width: 100%;
+  }
+  .list-item{
+    position: relative;
+  }
+  
+  .list-item:hover .submenu{
+    display: block;
+  }
+
+.box {
+  /* position: relative; */
+  overflow: hidden;
+}
+  
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+
+  transform: translateX(-80%);
+  transition: transform 250ms ease;
+  background-color: darkolivegreen;
+}
+
+.box:hover .overlay {
+  transform: translateX(0%);
+}
+
+.box:hover .overlay-desc{
+  display: none;
+  transition: transform 250ms ease;
+}
+
+.box:hover .list{
+  display: flex;
+}
+
+.overlay-desc{
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 254px;
+  color: lavender;
+  font-size: 34px;
+  letter-spacing: 2px;
+  writing-mode: vertical-lr;
+
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
